@@ -1,9 +1,9 @@
 import { CssBaseline } from '@mui/material';
 import type { AppProps } from 'next/app';
-import { store } from 'presentation/app/store';
-import AppThemeProvider from 'presentation/providers/app-theme-provider';
 import { Provider } from 'react-redux';
 import Notification from '../components/base/notification';
+import { store } from '../src/presentation/app/store';
+import AppThemeProvider from '../src/presentation/providers/app-theme-provider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
