@@ -1,12 +1,18 @@
 import { Button, ListItemIcon, MenuItem, Typography } from '@mui/material';
-import { useAppDispatch, useAppSelector } from 'presentation/app/hooks';
-import { selectAuth, setAccount } from 'presentation/stores/auth-slice';
+import { useEffect, useState } from 'react';
+import { FaArrowCircleRight } from 'react-icons/fa';
+import {
+  useAppDispatch,
+  useAppSelector,
+} from '../../src/presentation/app/hooks';
+import {
+  selectAuth,
+  setAccount,
+} from '../../src/presentation/stores/auth-slice';
 import {
   AlertSeverity,
   openNotification,
-} from 'presentation/stores/notification-slice';
-import { useEffect, useState } from 'react';
-import { FaArrowCircleRight } from 'react-icons/fa';
+} from '../../src/presentation/stores/notification-slice';
 import AppMenu from './menus/app-menu';
 
 const AccountButton: React.FC = () => {
@@ -84,13 +90,6 @@ const AccountButton: React.FC = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    const setup = async () => {
-      await setupEventListener();
-    };
-    setup();
-  }, []);
 
   const setupEventListener = async () => {
     try {

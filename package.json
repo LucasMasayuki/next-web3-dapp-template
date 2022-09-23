@@ -53,6 +53,7 @@
     "hardhat-gas-reporter": "^1.0.9",
     "husky": "^8.0.1",
     "jsdom": "^20.0.0",
+    "mocha": "^10.0.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
     "react-icons": "^4.4.0",
