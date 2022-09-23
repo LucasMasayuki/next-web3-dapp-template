@@ -131,16 +131,19 @@ const AccountButton: React.FC = () => {
     <>
       <Button
         variant="contained"
-        size="small"
         sx={{
-          fontWeight: 'bold',
           borderRadius: '100px',
-          p: '8px',
-          width: '100%',
+          p: 1,
+          maxWidth: '200px',
         }}
+        onClick={account != '' ? handleClick : onClickConnectWallet}
       >
         <Typography
-          onClick={account != '' ? handleClick : onClickConnectWallet}
+          sx={{
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+          }}
         >
           {account != '' ? account : 'Connect wallet'}
         </Typography>

@@ -15,7 +15,7 @@ import {
   toogleColorMode,
 } from '../../src/presentation/stores/color-mode-slice';
 import { ColorModes } from '../../src/utils/constants';
-import AccountMenu from './menus/account-menu';
+import AccountButton from './account-button';
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -43,6 +43,7 @@ const Header: React.FC = () => {
             LOGO
           </Typography>{' '}
           <Box component="div" sx={{ flexGrow: 1 }} />
+          <AccountButton />
           <IconButton
             color="primary"
             sx={{ ml: 1 }}
@@ -50,7 +51,6 @@ const Header: React.FC = () => {
           >
             {colorMode === ColorModes.DARK ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
-          <AccountMenu />
         </Toolbar>
       </Container>
     </AppBar>
